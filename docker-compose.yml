@@ -2,6 +2,7 @@ version: "3.6"
 services:
   app:
     build: .
+    command: ./bin/wait_for.sh postgres:5432 -- python manage.py runserver 0:8080
     volumes:
       - ./:/opt/initial_project
     ports:
