@@ -4,9 +4,16 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+bandit = "*"
+flake8 = "*"
 
 [packages]
 django = "*"
+psycopg2-binary = "*"
+djangorestframework = "*"
+django-rest-swagger = "*"
+drf-yasg = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.7"

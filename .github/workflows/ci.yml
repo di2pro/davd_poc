@@ -1,0 +1,31 @@
+name: CI
+
+on: push
+
+jobs:
+  test_app:
+    name: Testing Application
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetching the repo
+        uses: actions/checkout@v1
+
+      - name: Setting up python
+        uses: actions/setup-python@v1
+        with:
+          python-version: '3.7'
+          architecture: 'x64'
+
+      - name: Installing pipenv
+        run: pip install -U pipenv
+
+      - name: Installing dependencies
+        run: pipenv install --system --dev
+
+      - name: Running linters
+        run: |
+          flake8 .
+          bandit -r .
+
+      - name: Running tests
+        run: python manage.py test
