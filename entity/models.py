@@ -7,7 +7,7 @@ class Entity(models.Model):
     name = models.CharField(null=False, blank=False, max_length=120)
     created_at = models.DateTimeField(auto_created=True)
     disabled_at = models.DateTimeField(null=True, blank=True)
-    organization = models.ForeignKey('Organization', related_name='entities', on_delete=models.CASCADE)
+    organization = models.ForeignKey('organization.Organization', related_name='entities', on_delete=models.CASCADE)
 
 
 class EntityData(models.Model):
