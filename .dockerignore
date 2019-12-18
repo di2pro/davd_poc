@@ -1,11 +1,6 @@
-# editors
 .idea/
 .vscode/
 
-# env
-*.env
-
-# directories
 dist/
 build/
 coverage/
@@ -13,8 +8,5 @@ node_modules/
 volumes
 __pychahe__/
 
-# py
 *.pyc
-
-# logs
 *.log
