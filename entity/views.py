@@ -1,3 +1,14 @@
-from django.shortcuts import render
+from rest_framework.mixins import ListModelMixin, CreateModelMixin
+from rest_framework.viewsets import GenericViewSet
 
-# Create your views here.
+from . import models, serializers
+
+
+class EntityListViewSet(ListModelMixin, GenericViewSet):
+    model = models.Entity
+    serializer_class = serializers.EntitySerializer
+
+
+class EntityDataListViewSet(ListModelMixin, CreateModelMixin, GenericViewSet):
+    model = models.EntityData
+    serializer_class = serializers.EntityDataSerializer
