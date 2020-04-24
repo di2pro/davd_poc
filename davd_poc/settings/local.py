@@ -5,9 +5,9 @@ SECRET_KEY = 'secret_key'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'initial_project',
-        'USER': 'initial_project',
-        'PASSWORD': 'initial_project',
+        'NAME': 'davd_poc',
+        'USER': 'davd_poc',
+        'PASSWORD': 'davd_poc',
         'HOST': 'localhost',
         'PORT': 5433,
     }

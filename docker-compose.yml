@@ -4,7 +4,7 @@ services:
     build: .
     command: ./bin/wait_for.sh postgres:5432 -- python manage.py runserver 0:8080
     volumes:
-      - ./:/opt/initial_project
+      - ./:/opt/davd_poc
     ports:
       - 8080:8080
     depends_on:

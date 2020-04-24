@@ -1,5 +1,5 @@
 """
-WSGI config for initial_project project.
+WSGI config for davd_poc project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -12,6 +12,6 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 settings = os.getenv('SETTINGS', 'base')
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', f"initial_project.settings.{settings}")
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', f"davd_poc.settings.{settings}")
 
 application = get_wsgi_application()
