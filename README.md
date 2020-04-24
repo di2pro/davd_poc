@@ -1,4 +1,4 @@
-# Initial Project
+# Davd Proof of concept
 
 ![](https://github.com/di2pro/initial_project/workflows/CI/badge.svg)
 
